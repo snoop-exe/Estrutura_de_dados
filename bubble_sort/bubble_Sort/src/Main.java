@@ -5,20 +5,23 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         
-        int[] vetor = new int[1000];
+        int[] vetor = new int[50000];
         Random random = new Random();
+
         for (int i = 0; i < vetor.length; i++) {
             vetor[i] = i;
         }
 
         for (int i = 0; i < vetor.length; i++) {
-            int j = random.nextInt(vetor.length);
 
+            int j = random.nextInt(vetor.length);
             int aux = vetor[i];
+
             vetor[i] = vetor[j];
             vetor[j] = aux;
         }
         System.out.println("Vetor desordenado: " + Arrays.toString(vetor));
+
        int aux;
        boolean controle;
        long inicio = System.currentTimeMillis();
@@ -26,7 +29,6 @@ public class Main {
 
        for(int i = 0; i < vetor.length;i++) {
            controle = true;
-           System.out.println("Vetor ordenado: " + Arrays.toString(vetor));
            for (int j = 0; j < (vetor.length - 1); j++) {
                if (vetor[j] > vetor[j + 1]) {
                    aux = vetor[j];
