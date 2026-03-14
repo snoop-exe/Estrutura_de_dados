@@ -5,7 +5,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         
-        int[] vetor = new int[50000];
+        int[] vetor = new int[100000];
         Random random = new Random();
 
         for (int i = 0; i < vetor.length; i++) {
@@ -20,7 +20,7 @@ public class Main {
             vetor[i] = vetor[j];
             vetor[j] = aux;
         }
-        System.out.println("Vetor desordenado: " + Arrays.toString(vetor));
+//        System.out.println("Vetor desordenado: " + Arrays.toString(vetor));
 
        int aux;
        boolean controle;
